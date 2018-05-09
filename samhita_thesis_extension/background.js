@@ -247,7 +247,7 @@ function doGetCheck(getData) {
                 }
             }
         }
-        getXhr.open('POST', 'https://42n13klu0d.execute-api.us-east-2.amazonaws.com/test/getarticleres', true);
+        getXhr.open('POST', ENDPOINT, true);
         getXhr.send(JSON.stringify(getData));
     });
 }
@@ -288,7 +288,7 @@ function flushToDB(dataObjs) {
                             }
                         
                             var xhr = new XMLHttpRequest();
-                            xhr.open('POST', 'https://42n13klu0d.execute-api.us-east-2.amazonaws.com/test/testres', true);
+                            xhr.open('POST', ENDPOINT, true);
                             xhr.setRequestHeader("Content-type", "application/json");
                             xhr.send(JSON.stringify(data));
                         }
@@ -309,7 +309,7 @@ function flushToDB(dataObjs) {
                     }
                     console.log(JSON.stringify(data));
                     var xhr = new XMLHttpRequest();
-                    xhr.open('POST', 'https://42n13klu0d.execute-api.us-east-2.amazonaws.com/test/testres', true);
+                    xhr.open('POST', ENDPOINT, true);
                     xhr.setRequestHeader("Content-type", "application/json");
                     xhr.send(JSON.stringify(data));
                 }

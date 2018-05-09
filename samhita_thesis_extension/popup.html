@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Self-Report Public Profile Information</title>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <!-- <script src="jquery-3.2.1.min.js"></script>
+    <script src="popper.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="bootstrap.css"> -->
+    
+    <script src="popup.js"></script>
+  </head>
+
+  <body style="min-width:600px; padding:20px;">
+    <h3>Content Engagement Data Collector</h3>
+    <p>Thank you for installing the chrome extension!
+      <br>
+      <br>
+      Please follow the instructions PDF and provide information that is publicly 
+      available on your Facebook profile in the following fields.  Note that you 
+      should only report what is publicly available, but you do not have to report
+      any information you do not want to.</p>
+    </p>
+    <form id="infoform" novalidate>
+      <h4>Basic Information</h4>
+        <h6>Name</h6>
+        <div class="form-group" id="name">
+          <input required type="text" class="form-control" id="nameInput" aria-describedby="nameHelp" placeholder="Full name">
+          <small id="nameHelp" class="form-text text-muted">Full name as it appears on your Facebook profile.</small>
+        </div>
+        <h6>Gender</h6>
+        <div class="form-group" id="gender">
+          <select class="form-control" id="gender-select">
+            <option value="">Select</option>
+            <option value="Female">Female</option>
+            <option value"Male">Male</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        </div>
+        <h6>Languages</h6>
+        <div class="form-group" id="language-1">
+          <input type="text" class="form-control" id="language1Input" aria-describedby="languageHelp" placeholder="Language name">
+        </div>
+        <div class="form-group" id="language-2">
+          <input type="text" class="form-control" id="language2Input" aria-describedby="languageHelp" placeholder="Language name">
+        </div>
+        <div class="form-group" id="language-3">
+          <input type="text" class="form-control" id="language3Input" aria-describedby="languageHelp" placeholder="Language name">
+        </div>
+      <h4>Places Lived</h4>
+        <h6>Current Location</h6>
+        <div class="form-group" id="current-location">
+          <input type="text" class="form-control" id="currentLocationName" aria-describedby="currentLocationHelp" placeholder="Current location">
+        </div>
+        <h6>Hometown</h6>
+        <div class="form-group" id="hometown-location">
+          <input type="text" class="form-control" id="hometownLocationName" aria-describedby="hometownLocationHelp" placeholder="Hometown location">
+        </div>
+        <h6>Other Locations</h6>
+        <div class="form-group" id="other-location-1">
+          <input type="text" class="form-control" id="otherLocation1Name" aria-describedby="otherLocationHelp" placeholder="Location">
+        </div>
+        <div class="form-group" id="other-location-2">
+          <input type="text" class="form-control" id="otherLocation2Name" aria-describedby="otherLocationHelp" placeholder="Location">
+        </div>
+      <h4>Education</h4>
+        <h6>Education 1</h6>
+        <div class="form-group" id="education-1-name">
+          <input type="text" class="form-control" id="education1Name" aria-describedby="educationHelp" placeholder="School name">
+        </div>
+        <div class="form-group" id="education-1-location">
+            <input type="text" class="form-control" id="education1Location" aria-describedby="educationLocationHelp" placeholder="Location">
+        </div>
+        <h6>Education 2</h6>
+        <div class="form-group" id="education-2-name">
+          <input type="text" class="form-control" id="education2Name" aria-describedby="educationHelp" placeholder="School name">
+        </div>
+        <div class="form-group" id="education-2-location">
+            <input type="text" class="form-control" id="education2Location" aria-describedby="educationLocationHelp" placeholder="Location">
+        </div>
+        <h6>Education 3</h6>
+        <div class="form-group" id="education-3-name">
+          <input type="text" class="form-control" id="education3Name" aria-describedby="educationHelp" placeholder="School name">
+        </div>
+        <div class="form-group" id="education-3-location">
+            <input type="text" class="form-control" id="education3Location" aria-describedby="educationLocationHelp" placeholder="Location">
+        </div>
+      <h4>Work</h4>
+        <h6>Company 1</h6>
+        <div class="form-group" id="company-1-name">
+          <input type="text" class="form-control" id="company1Name" aria-describedby="companyHelp" placeholder="Company name">
+        </div>
+        <div class="form-group" id="company-1-role">
+          <input type="text" class="form-control" id="company1Role" aria-describedby="roleHelp" placeholder="Your role">
+          <small id="roleHelp" class="form-text text-muted">Like "Sales Associate," "Software Engineering Intern," or "Marketing Lead."</small>
+        </div>
+        <div class="form-group" id="company-1-location">
+          <input type="text" class="form-control" id="company1Location" aria-describedby="workLocationHelp" placeholder="Location">
+        </div>
+        <h6>Company 2</h6>
+        <div class="form-group" id="company-2-name">
+          <input type="text" class="form-control" id="company2Name" aria-describedby="companyHelp" placeholder="Company name">
+        </div>
+        <div class="form-group" id="company-2-role">
+          <input type="text" class="form-control" id="company2Role" aria-describedby="roleHelp" placeholder="Your role">
+        </div>
+        <div class="form-group" id="company-2-location">
+          <input type="text" class="form-control" id="company2Location" aria-describedby="workLocationHelp" placeholder="Location">
+        </div>
+        <h6>Company 3</h6>
+        <div class="form-group" id="company-3-name">
+          <input type="text" class="form-control" id="company3Name" aria-describedby="companyHelp" placeholder="Company name">
+        </div>
+        <div class="form-group" id="company-3-role">
+          <input type="text" class="form-control" id="company3Role" aria-describedby="roleHelp" placeholder="Your role">
+        </div>
+        <div class="form-group" id="company-3-location">
+          <input type="text" class="form-control" id="company3Location" aria-describedby="workLocationHelp" placeholder="Location">
+        </div>
+        <h6>Company 4</h6>
+        <div class="form-group" id="company-4-name">
+          <input type="text" class="form-control" id="company4Name" aria-describedby="companyHelp" placeholder="Company name">
+        </div>
+        <div class="form-group" id="company-4-role">
+          <input type="text" class="form-control" id="company4Role" aria-describedby="roleHelp" placeholder="Your role">
+        </div>
+        <div class="form-group" id="company-4-location">
+          <input type="text" class="form-control" id="company4Location" aria-describedby="workLocationHelp" placeholder="Location">
+        </div>
+      <input id="saveInfo" type="button" class="btn btn-primary" value="Save"/>
+      <!-- <input id="saveInfo" type="submit" value="Save" class="btn btn-primary"/> -->
+      </form>
+      <br>
+      <p id="errorMessage"></p>
+  </body>
+</html>

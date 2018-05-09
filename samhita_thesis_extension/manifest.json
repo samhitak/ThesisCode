@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+
+  "name": "Content Engagement Data Collector",
+  "description": "This extension will collect data on what articles appear on your Facebook newsfeed and which articles you click on.  You can also self-report your public profile information in the popup.",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": [
+    "activeTab",
+    "storage",
+    "tabs",
+    "webRequest",
+    "<all_urls>",
+    "webNavigation"
+  ]
+}
